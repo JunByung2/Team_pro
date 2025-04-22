@@ -355,23 +355,22 @@
     </footer>
 <script>
       function toggleMenu() {
-        const menu = document.getElementById('dropdownMenu')
-        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex'
+        const menu = document.getElementById("dropdownMenu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
       }
 
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault()
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-          })
-          document.getElementById('dropdownMenu').style.display = 'none'
-        })
-      })
-    </script>
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+          document.getElementById("dropdownMenu").style.display = "none";
+        });
+      });
 
-    
-<script>
+
+
   const lines = document.querySelectorAll(".line");
   let currentIndex = 0;
 
@@ -381,7 +380,7 @@
     const containerTop = document.getElementById("scroll-lines").offsetTop;
 
     // 기준점에 도달한 후, 스크롤할 때마다 한 줄씩 등장
-    if (scrollY > containerTop + currentIndex * 80 && currentIndex < lines.length) {
+    if (scrollY > containerTop + currentIndex * 110 && currentIndex < lines.length) {
       lines[currentIndex].classList.add("show");
       currentIndex++;
     }
